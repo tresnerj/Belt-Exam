@@ -1,0 +1,20 @@
+<form (ngSubmit)="create(pet.form.value)" #pet="ngForm">
+  <h3>Know of a pet needing a home?</h3>
+
+  <h3>Pet Name:<input type='text' name="name" ngModel></h3>
+  <p *ngIf="errors.name">{{errors.name.message}}{{errors.name}}</p>
+  <h3>Pet Type: <input type='text' name="type" ngModel></h3>
+  <p *ngIf="errors.type">{{errors.type.message}}</p>
+  <h3>Description: <input type='text' name="desc" ngModel></h3>
+  <p *ngIf="errors.desc">{{errors.desc.message}}</p>
+  
+  <input type='hidden' name='likes' value='0' ngModel>
+
+  <h3>Skills:</h3>
+  <h3 class='skills'>Skill 1: <input type='text' name='skills.s1' ngModel></h3>
+  <h3 class='skills'>Skill 2: <input type='text' name='skills.s2' ngModel></h3>
+  <h3 class='skills'>Skill 3: <input type='text' name='skills.s3' ngModel></h3>
+
+  <button type='submit'>Add Pet</button>
+  <button (click)="goHome()">Cancel</button>
+</form>

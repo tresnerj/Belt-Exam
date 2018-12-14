@@ -1,0 +1,12 @@
+<h3>Details about {{pet.name}}</h3>
+
+<h3>Pet type: <p>{{pet.type}}</p></h3>
+<h3>Description: <p>{{pet.desc}}</p></h3>
+<h3>Skills: 
+    <p *ngIf='pet.skills.s1'>{{pet.skills.s1}}</p>
+    <p *ngIf='pet.skills.s2'>{{pet.skills.s2}}</p>
+    <p *ngIf='pet.skills.s3'>{{pet.skills.s3}}</p>
+</h3>
+<h3>Likes: <p>{{pet.likes}}</p></h3>
+<button *ngIf='clicked == false' (click)='like(pet._id)'>Like this pet</button>
+<button (click)='adopt(pet._id)'>Adopt this pet!</button>

@@ -1,0 +1,19 @@
+<h3>Edit this pet</h3>
+
+
+<h3>Pet name: <input type="text" name="pet.name" [(ngModel)]="pet.name" /></h3>
+<p *ngIf="errors.name">{{errors.name.message}}{{errors.name}}</p>
+
+<h3>Pet type: <input type="text" name="pet.type" [(ngModel)]="pet.type" /></h3>
+<p *ngIf="errors.type">{{errors.type.message}}</p>
+
+<h3>Pet description: <input type="text" name="pet.desc" [(ngModel)]="pet.desc" /></h3>
+<p *ngIf="errors.desc">{{errors.desc.message}}</p>
+
+<h3>Skills (optional): </h3>
+<h3 class='skills'>Skill1: <input type='text' name="pet.skills.s1" [(ngModel)]="pet.skills.s1" /></h3>
+<h3 class='skills'>Skill2: <input type='text' name="pet.skills.s2" [(ngModel)]="pet.skills.s2" /></h3>
+<h3 class='skills'>Skill3: <input type='text' name="pet.skills.s3" [(ngModel)]="pet.skills.s3" /></h3>
+
+<button (click)="update()" >Update</button>
+<button (click)="goBack()" >Cancel</button>
